@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= planet.name %></title>
+  </head>
+  <body>
+    <h1><%= planet.name %></h1>
+    <a href="/planets/">Back to Planets</a>
+    <% if (planet.isGasGiant) { %>
+    <p>This planet is a gas giant!</p>
+    <% } else { %>
+    <p>This planet is not a gas giant!</p>
+    <% } %>
+    <form action="/planets/<%= planet._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= planet.name %></button>
+    </form>
+    <a href="/planets/<%= planet._id %>/edit">Edit <%= planet.name %></a>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a New Planet</title>
+  </head>
+  <body>
+    <h1>Create a new Planet</h1>
+    <a href="/planets">Back to Planets</a>
+    <form action="/planets" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="isGasGiant">Gas Giant?</label>
+      <input type="checkbox" name="isGasGiant" id="isGasGiant" />
+
+      <button type="submit">Add Planet</button>
+    </form>
+  </body>
+</html>
